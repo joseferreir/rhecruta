@@ -2,7 +2,7 @@ version: '2'
 services:
   # DB
   postgres-dac-projeto:
-    container_name: dacprojeto-db
+    container_name: dac-projeto-db
     image: ijm/dac-projeto-db
     build: ./dac-projeto-core/postgres
     ports:
@@ -28,12 +28,12 @@ services:
   dac-projeto-web:
     container_name: dac-projeto-web
     build: ./dac-projeto-web
-    image: npw/dac-projeto-web
+    image: ijm/dac-projeto-web
     ports:
      - "8083:8080"
      - "4952:4848"
     links:
-    # - "dac-projeto-core:projeto-core-server"
+     - "dac-projeto-core:projeto-core-server"
 
 networks:
   default:
