@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="br.edu.ifbp.dac.percistencia.entity" v="3.3" rws="_14882104587902" Pws="_14882104587902" cws="_14882104587902" persistenceUnitName="DAC_PU" sm="false" xs="false" id="_14882104587881" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:schema>DAC</jpa:schema>
+    <jpa:mapped-superclass xre="false" compositePrimaryKeyClass="UsuarioPK" abs="false" class="Usuario" v="true" m="false" rootElement="_14882104587881" id="_1488212885743">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:ath>Laerton_note</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="email" id="_148821366547522">
+                <jpa:bv>
+                    <jpa:nn m="E-mail eh obrigatorio"/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="senha" id="_148821366580623">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="nome" id="_148821366608724">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" name="status" id="_148821366640225">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_148821366741526">
+                <jpa:bv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Usuario.findAll">
+            <jpa:query>Select m from Usuario m</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Usuario.findByEmail">
+            <jpa:query>Select u from Usuario u where u.email=:email</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Usuario.findBySenha">
+            <jpa:query>Select u from Usuario u where u.senha=:senha</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Usuario.findByNome">
+            <jpa:query>Select u from Usuario u where u.nome=:nome</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Usuario.findByStatus">
+            <jpa:query>Select u from Usuario u where u.status=:status</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:mapped-superclass>
+    <jpa:entity xre="false" compositePrimaryKeyClass="CanidatoPK" abs="false" class="Canidato" superclassId="_1488212885743" v="true" m="false" rootElement="_14882104587881" id="_1488210831536">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:ath>Laerton_note</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="double" v="true" name="nota" id="_148821109950018">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="curriculo" id="_148821109998419">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="preferencia" id="_148821110044920">
+                <jpa:bv/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Canidato.findAll">
+            <jpa:query>Select e from Canidato e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Canidato.findByNota">
+            <jpa:query>Select c from Canidato c where c.nota=:nota</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Canidato.findByCurriculo">
+            <jpa:query>Select c from Canidato c where c.curriculo=:curriculo</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Canidato.findByPreferencia">
+            <jpa:query>Select c from Canidato c where c.preferencia=:preferencia</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="FuncionarioPK" abs="false" class="Funcionario" superclassId="_1488212885743" v="true" m="false" rootElement="_14882104587881" id="_1488210869650">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:ath>Laerton_note</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="cargo" id="_148821104748317">
+                <jpa:bv/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Funcionario.findAll">
+            <jpa:query>Select e from Funcionario e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Funcionario.findByCargo">
+            <jpa:query>Select f from Funcionario f where f.cargo=:cargo</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="VagaPK" abs="false" class="Vaga" v="true" m="false" rootElement="_14882104587881" id="_1488213740016">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:ath>Laerton_note</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="int" v="true" name="tipo" id="_148821375306129">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="descricao" id="_148821375364630">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="requisitos" id="_148821375426831">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1488210869650" v="true" name="funcionario" id="_148884829106730">
+                <jpa:bv/>
+            </jpa:one-to-one>
+            <jpa:many-to-many own="true" collection-type="java.util.List" connected-entity-id="_1488210831536" v="true" name="canidatoes" id="_149001166519852">
+                <jpa:bv/>
+            </jpa:many-to-many>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_148821374001727">
+                <jpa:bv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Vaga.findAll">
+            <jpa:query>Select e from Vaga e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Vaga.findByTipo">
+            <jpa:query>Select v from Vaga v where v.tipo=:tipo</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Vaga.findByDescricao">
+            <jpa:query>Select v from Vaga v where v.descricao=:descricao</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Vaga.findByRequisitos">
+            <jpa:query>Select v from Vaga v where v.requisitos=:requisitos</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyType="D" compositePrimaryKeyClass="AvalicaoPK" abs="false" class="Avalicao" v="true" m="false" rootElement="_14882104587881" id="_1488213873783">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:ath>Laerton_note</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="java.sql.Timestamp" v="true" name="horaio" id="_148821389487234">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="true" connected-entity-id="_1488210869650" v="true" name="funcionario" id="_1488214719107171">
+                <jpa:bv/>
+            </jpa:many-to-one>
+            <jpa:many-to-one optional="true" primaryKey="true" connected-entity-id="_1488213740016" v="true" name="vaga" id="_1488214753693173">
+                <jpa:bv/>
+            </jpa:many-to-one>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="true" connected-entity-id="_1488210831536" v="true" name="canidato" id="_1488215670094254">
+                <jpa:bv/>
+            </jpa:one-to-one>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Avalicao.findAll">
+            <jpa:query>Select e from Avalicao e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Avalicao.findByHoraio">
+            <jpa:query>Select a from Avalicao a where a.horaio=:horaio</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Avalicao.findByIdFuncionario">
+            <jpa:query>Select a from Avalicao a where a.idFuncionario=:idFuncionario</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Avalicao.findByIdCanidato">
+            <jpa:query>Select a from Avalicao a where a.idCanidato=:idCanidato</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Avalicao.findByIdVaga">
+            <jpa:query>Select a from Avalicao a where a.idVaga=:idVaga</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the JPA Modeler
+ */</jpa:snp>
+    <jpa:inf e="true" n="java.io.Serializable"/>
+    <jpa:c/>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_14882104587902">
+            <i ref="_1488213873783" x="464" y="226"/>
+            <i ref="_1488210831536" x="182" y="206"/>
+            <i ref="_1488213740016" x="454" y="429"/>
+            <i ref="_1488210869650" x="661" y="226"/>
+            <i ref="_1488212885743" x="478" y="21"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>
